@@ -1,0 +1,14 @@
+## Interface: 100206
+## Title: BetterBags - Sniper's Filters
+## Notes: Various filters for BetterBags
+
+## IconTexture: Interface\ICONS\Inv_misc_rune_01
+
+## Version: 1.0.0
+## Author: PrivateSniper
+## X-Date: 2024-04-06T11:04:40Z
+## X-Category: Bags & Inventory
+## Dependencies: BetterBags
+
+Database.lua
+Core.lua
