@@ -23,7 +23,7 @@ items.legionArtefacts[128821] = true -- Claws of Ursoc [Druid]
 
 -- Shadowlands Legendaries
 items.slLegendaries = {}
-items.slLegendaries[172320] = true -- Lycara's Fleeting Glimpse
+items.slLegendaries[172320] = true -- Umbrahide Waistguard / Lycara's Fleeting Glimpse
 
 -- Openables
 items.openables = {}
