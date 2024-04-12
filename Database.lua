@@ -32,6 +32,7 @@ items.dfKnowledge = {
 
 -- Darkmoon Faire
 items.darkmoonFaire = {
+    [71083] = true, -- Darkmoon Game Token
     [71634] = true, -- Darkmoon Adventurer's Guide
     [71635] = true, -- Imbued Crystal
     [71636] = true, -- Monstrous Egg

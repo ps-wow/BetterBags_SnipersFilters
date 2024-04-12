@@ -23,9 +23,6 @@ end
 categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
     local itemID = data.itemInfo.itemID
 
-    Debug(data.itemInfo, 'data.itemInfo')
-    Debug(data, 'data')
-
     -- 07. Legion 
     if data.itemInfo.expacID == LEGION then
         -- Legendaries
@@ -33,7 +30,7 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
             return "Legion Legendary"
         end
 
-        -- Artifacts
+        -- Artifact Weapons
         if data.itemInfo.itemQuality == QUALITY_ARTIFACT then
             return "Legion Artifact"
         end
@@ -49,6 +46,17 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
         -- Legendaries
         if data.itemInfo.itemQuality == QUALITY_LEGENDARY then
             return "Shadowlands Legendary"
+        end
+    end
+
+    if itemID > 0 then
+        Debug(data.itemInfo, 'data.itemInfo')
+        Debug(data, 'data')
+    end
+
+    if data.itemInfo.expacID < CURRENT_EXPANSION then
+        if data.itemInfo.itemType == "Tradeskill" then
+            return "Legacy Tradeskill"
         end
     end
 
