@@ -71,6 +71,11 @@ for itemID in pairs(addon.db.openables) do
     categories:AddItemToCategory(itemID, "Open")
 end
 
+-- Account Bound Reputation
+for itemID in pairs(addon.db.accountBoundRep) do
+    categories:AddItemToCategory(itemID, "Reputation")
+end
+
 -- Lockboxes
 for itemID in pairs(addon.db.lockboxes) do
     categories:AddItemToCategory(itemID, "Lockboxes")

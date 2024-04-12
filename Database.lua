@@ -14,6 +14,13 @@ items.openables = {
     [156682] = true, -- Otherworldly Satchel of Helpful Goods
     [156698] = true, -- Tranquil Satchel of Helpful Goods
     [171305] = true, -- Salvaged Cache of Goods
+    
+    -- Assault NZoth
+    [173372] = true, -- Cache of the Black Empire
+    [174958] = true, -- Cache of the Fallen Mogu
+
+    -- Dragonflight
+    [207582] = true, -- Box of Tampered Reality
 }
 
 -- Lockboxes
@@ -38,6 +45,11 @@ items.darkmoonFaire = {
     [71636] = true, -- Monstrous Egg
     [71637] = true, -- Mysterious Grimoire
     [71638] = true, -- Ornate Weapon
+}
+
+-- Account Bound Rep Items
+items.accountBoundRep = {
+    [208952] = true, -- Soridormi's Letter of Commendation
 }
 
 -- Initialise
