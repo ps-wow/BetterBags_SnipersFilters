@@ -8,6 +8,12 @@ local categories = BetterBags:GetModule("Categories")
 ---@type string, AddonNS
 local _, addon = ...
 
+local CURRENT_EXPANSION = 9
+local LEGION = 6
+local SHADOWLANDS = 8
+local QUALITY_LEGENDARY = 5
+local QUALITY_ARTIFACT = 6
+
 local function Debug(obj, desc)
     if ViragDevTool_AddData then
         ViragDevTool_AddData(obj, desc)
@@ -16,22 +22,40 @@ end
 
 categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
     local itemID = data.itemInfo.itemID
-    
-    -- if data.itemInfo.itemID == 137463 then
-    --     Debug(data.itemInfo, 'data.itemInfo')
-    --     Debug(data, 'data')
-    -- end
 
-    -- Legion Artifact Relics => Junk
-    if data.itemInfo.expacID == 6 then
+    Debug(data.itemInfo, 'data.itemInfo')
+    Debug(data, 'data')
+
+    -- 07. Legion 
+    if data.itemInfo.expacID == LEGION then
+        -- Legendaries
+        if data.itemInfo.itemQuality == QUALITY_LEGENDARY then
+            return "Legion Legendary"
+        end
+
+        -- Artifacts
+        if data.itemInfo.itemQuality == QUALITY_ARTIFACT then
+            return "Legion Artifact"
+        end
+
+        -- Artifact Relics => Junk
         if data.itemInfo.itemSubType == "Artifact Relic" then
             return "Junk"
         end
     end
 
-    if data.itemInfo.expacID < 9 then
-        return "Legacy"
+    -- 09. Shadowlands
+    if data.itemInfo.expacID == SHADOWLANDS then
+        -- Legendaries
+        if data.itemInfo.itemQuality == QUALITY_LEGENDARY then
+            return "Shadowlands Legendary"
+        end
     end
+
+    -- Other Legacy
+    -- if data.itemInfo.expacID < CURRENT_EXPANSION then
+    --     return "Legacy"
+    -- end
 end)
 
 -- Openables
@@ -39,14 +63,9 @@ for itemID in pairs(addon.db.openables) do
     categories:AddItemToCategory(itemID, "Open")
 end
 
--- Legion Artefact's
-for itemID in pairs(addon.db.legionArtefacts) do
-    categories:AddItemToCategory(itemID, "Legion Artefact")
-end
-
--- Legion Legendaries
-for itemID in pairs(addon.db.legionLegendaries) do
-    categories:AddItemToCategory(itemID, "Legion Legendary")
+-- Lockboxes
+for itemID in pairs(addon.db.lockboxes) do
+    categories:AddItemToCategory(itemID, "Lockboxes")
 end
 
 -- Shadowlands Legendaries
