@@ -68,11 +68,6 @@ for itemID in pairs(addon.db.lockboxes) do
     categories:AddItemToCategory(itemID, "Lockboxes")
 end
 
--- Shadowlands Legendaries
-for itemID in pairs(addon.db.slLegendaries) do
-    categories:AddItemToCategory(itemID, "Shadowlands Legendary")
-end
-
 -- Dragonflight Profession Knowledge
 for itemID in pairs(addon.db.dfKnowledge) do
     categories:AddItemToCategory(itemID, "DF Knowledge")
