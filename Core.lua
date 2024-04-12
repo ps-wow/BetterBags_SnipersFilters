@@ -76,9 +76,7 @@ end
 -- Event: Love is in the Air
 categories:AddItemToCategory(49927, "Love is in the Air") -- Love Token
 
--- Event: Darkmoon Faire
-categories:AddItemToCategory(71634, "Darkmoon Faire") -- Darkmoon Adventurer's Guide
-categories:AddItemToCategory(71635, "Darkmoon Faire") -- Imbued Crystal
-categories:AddItemToCategory(71636, "Darkmoon Faire") -- Monstrous Egg
-categories:AddItemToCategory(71637, "Darkmoon Faire") -- Mysterious Grimoire
-categories:AddItemToCategory(71638, "Darkmoon Faire") -- Ornate Weapon
+-- Darkmoon Faire
+for itemID in pairs(addon.db.darkmoonFaire) do
+    categories:AddItemToCategory(itemID, "Darkmoon Faire")
+end
