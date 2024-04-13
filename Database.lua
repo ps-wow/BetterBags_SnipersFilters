@@ -21,6 +21,7 @@ items.openables = {
 
     -- Dragonflight
     [207582] = true, -- Box of Tampered Reality
+    [207584] = true, -- Box of Volatile Reality
 }
 
 -- Lockboxes
