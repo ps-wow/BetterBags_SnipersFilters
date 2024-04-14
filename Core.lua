@@ -54,11 +54,14 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
         Debug(data, 'data')
     end
 
-    if data.itemInfo.expacID < CURRENT_EXPANSION then
-        if data.itemInfo.itemType == "Tradeskill" then
-            return "Legacy Tradeskill"
+    if data.itemInfo.expacID ~= nil then
+        if data.itemInfo.expacID < CURRENT_EXPANSION then
+            if data.itemInfo.itemType == "Tradeskill" then
+                return "Legacy Tradeskill"
+            end
         end
     end
+
 
     -- Other Legacy
     -- if data.itemInfo.expacID < CURRENT_EXPANSION then
@@ -81,8 +84,13 @@ for itemID in pairs(addon.db.lockboxes) do
     categories:AddItemToCategory(itemID, "Lockboxes")
 end
 
+-- Dragonflight Profession Sparks
+for itemID in pairs(addon.db.dragonflight.sparks) do
+    categories:AddItemToCategory(itemID, "DF Sparks")
+end
+
 -- Dragonflight Profession Knowledge
-for itemID in pairs(addon.db.dfKnowledge) do
+for itemID in pairs(addon.db.dragonflight.knowledge) do
     categories:AddItemToCategory(itemID, "DF Knowledge")
 end
 

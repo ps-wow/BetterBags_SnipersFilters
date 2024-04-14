@@ -20,8 +20,17 @@ items.openables = {
     [174958] = true, -- Cache of the Fallen Mogu
 
     -- Dragonflight
+    [200073] = true, -- Valdrakken Treasures
     [207582] = true, -- Box of Tampered Reality
     [207584] = true, -- Box of Volatile Reality
+    [209837] = true, -- Faint Whispers of Dreaming
+    -- Dream
+    [210872] = true, -- Satchel of Dreams
+    [211389] = true, -- Cache of Overblooming Treasures
+    [211394] = true, -- Harvested Dreamseed Cache
+    [211411] = true, -- Sprouting Dreamtrove
+    [211413] = true, -- Budding Dreamtrove
+    [211414] = true, -- Blossoming Dreamtrove
 }
 
 -- Lockboxes
@@ -32,11 +41,23 @@ items.lockboxes = {
     [116920] = true, -- True Steel Lockbox
 }
 
--- Dragonflight Profession Knowledge
-items.dfKnowledge = {
-    [198608] = true, -- Alchemy Notes (Alchemy +3)
-    [200677] = true, -- Dreambloom Petal (Herbalism +1)
+items.dragonflight = {
+    sparks = {
+        [206959] = true, -- Spark of Dreams (10.2)
+    },
+    -- Dragonflight Profession Knowledge
+    knowledge = {
+        -- Mining
+        [194062] = true, -- Unyielding Stone Chunk (+1)
+        [201300] = true, -- Iridescent Ore Fragments (+1)
+        -- Herbalism
+        [200677] = true, -- Dreambloom Petal (+1)
+        -- Alchemy
+        [198608] = true, -- Alchemy Notes (+3)
+    },
 }
+
+
 
 -- Darkmoon Faire
 items.darkmoonFaire = {
@@ -51,6 +72,7 @@ items.darkmoonFaire = {
 -- Account Bound Rep Items
 items.accountBoundRep = {
     [208952] = true, -- Soridormi's Letter of Commendation
+    [200454] = true, -- Maruuk Centaur Insignia
 }
 
 -- Initialise
