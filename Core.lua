@@ -62,6 +62,10 @@ local function SSF_GetRealILVL(item)
 		tooltip = tooltip or CreateEmptyTooltip()
 		tooltip:ClearLines()
 		tooltip:SetHyperlink(item)
+
+        if tooltip.processingInfo == nil then
+            return 0
+        end
         
         local lines = tooltip.processingInfo.tooltipData.lines
 
