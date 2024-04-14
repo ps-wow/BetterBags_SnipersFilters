@@ -193,9 +193,9 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
                     end
 
                     if CanIMogIt ~= nil then
-                        if not CanIMogIt:IsTransmogable(itemLink) then
-                            return "Junk"
-                        end
+                        -- if not CanIMogIt:IsTransmogable(itemLink) then
+                        --     return "Junk"
+                        -- end
 
                         if not CanIMogIt:CharacterCanEquipItem(data.itemInfo.itemLink) then
                             -- Possible xmog for other character
