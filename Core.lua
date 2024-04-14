@@ -22,6 +22,7 @@ local DRAGONFLIGHT = 9
 local WARWITHIN = 10
 local QUALITY_LEGENDARY = 5
 local QUALITY_ARTIFACT = 6
+local QUALITY_HEIRLOOM = 7
 local DUNGEON_NORMAL_LOOT = 421
 
 local function Debug(obj, desc)
@@ -138,6 +139,10 @@ end
 categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
     local itemID = data.itemInfo.itemID
 
+    if data.itemInfo.itemQuality == QUALITY_HEIRLOOM then
+        return "Heirloom"
+    end
+
     -- If item has expacID
     if data.itemInfo.expacID ~= nil then
         -- 07. Legion 
@@ -183,13 +188,6 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
                     -- Neck/Ring/Trinket -> Junk
                     if IsJewelry(data.itemInfo) then
                         return "Junk"
-                    end
-
-                    if itemID > 0 then
-                        if data.itemInfo.itemType == "Armor" then
-                            Debug(data.itemInfo, 'data.itemInfo')
-                            Debug(data, 'data')
-                        end
                     end
 
                     if CanIMogIt ~= nil then
