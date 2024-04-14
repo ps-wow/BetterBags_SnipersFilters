@@ -21,6 +21,7 @@ items.openables = {
 
     -- Dragonflight
     [200073] = true, -- Valdrakken Treasures
+    [202172] = true, -- Overflowing Satchel of Coins
     [207582] = true, -- Box of Tampered Reality
     [207584] = true, -- Box of Volatile Reality
     [209837] = true, -- Faint Whispers of Dreaming
