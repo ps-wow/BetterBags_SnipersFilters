@@ -193,30 +193,14 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
                     end
 
                     if CanIMogIt ~= nil then
-                        -- if not CanIMogIt:IsTransmogable(itemLink) then
-                        --     return "Junk"
-                        -- end
-
-                        if not CanIMogIt:CharacterCanEquipItem(data.itemInfo.itemLink) then
-                            -- Possible xmog for other character
-                        else
-                            if CanIMogIt:PlayerKnowsTransmog(itemLink) then
-                                return "Junk"
-                            else
-                                -- Possible xmog for self
-                            end
+                        if CanIMogIt:PlayerKnowsTransmog(itemLink) then
+                            return "Junk"
                         end
                     end
                 end
             end
         end
     end
-
-
-    -- Other Legacy
-    -- if data.itemInfo.expacID < CURRENT_EXPANSION then
-    --     return "Legacy"
-    -- end
 end)
 
 -- Openables
