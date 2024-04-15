@@ -14,6 +14,7 @@ items.openables = {
     [156682] = true, -- Otherworldly Satchel of Helpful Goods
     [156698] = true, -- Tranquil Satchel of Helpful Goods
     [171305] = true, -- Salvaged Cache of Goods
+    [210063] = true, -- Invader's Satchel of Helpful Goods
     
     -- Assault NZoth
     [173372] = true, -- Cache of the Black Empire
@@ -25,6 +26,9 @@ items.openables = {
     [207582] = true, -- Box of Tampered Reality
     [207584] = true, -- Box of Volatile Reality
     [209837] = true, -- Faint Whispers of Dreaming
+    -- Loamm
+    [205257] = true, -- Clinking Dirt-Covered Pouch
+    [205964] = true, -- Small Loammian Supply Pack
     -- Dream
     [210872] = true, -- Satchel of Dreams
     [211389] = true, -- Cache of Overblooming Treasures
@@ -38,8 +42,15 @@ items.openables = {
 items.lockboxes = {
     [4633]   = true, -- Heavy Bronze Lockbox
     [4638]   = true, -- Reinforced Steel Lockbox
+    [5760]   = true, -- Eternium Lockbox
     [6355]   = true, -- Sturdy Locked Chest
+    [31952]  = true, -- Khorium Lockbox
+    [68729]  = true, -- Elementium Lockbox
+    [88567]  = true, -- Ghost Iron Lockbox
     [116920] = true, -- True Steel Lockbox
+    [121331] = true, -- Leystone Lockbox
+    [179311] = true, -- Synvir Lockbox
+    [190954] = true, -- Serevite Lockbox
 }
 
 items.dragonflight = {
@@ -53,8 +64,12 @@ items.dragonflight = {
         [201300] = true, -- Iridescent Ore Fragments (+1)
         -- Herbalism
         [200677] = true, -- Dreambloom Petal (+1)
+        -- Skinning
+        [198837] = true, -- Curious Hide Scraps (+1)
         -- Alchemy
         [198608] = true, -- Alchemy Notes (+3)
+        -- Tailoring
+        [206025] = true, -- Used Medical Wrap Kit (+3)
     },
 }
 
