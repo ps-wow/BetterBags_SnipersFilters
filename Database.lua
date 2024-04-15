@@ -61,6 +61,7 @@ items.dragonflight = {
     knowledge = {
         -- Mining
         [194062] = true, -- Unyielding Stone Chunk (+1)
+        [194039] = true, -- Heated Ore Sample (+1)
         [201300] = true, -- Iridescent Ore Fragments (+1)
         -- Herbalism
         [200677] = true, -- Dreambloom Petal (+1)
