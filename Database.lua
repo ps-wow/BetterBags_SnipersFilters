@@ -10,8 +10,8 @@ items.openables = {
     [49294]  = true, -- Ashen Sack of Gems
 
     -- Random Dungeons
-    [156683] = true, -- Satchel of Helpful Goods
     [156682] = true, -- Otherworldly Satchel of Helpful Goods
+    [156683] = true, -- Satchel of Helpful Goods
     [156698] = true, -- Tranquil Satchel of Helpful Goods
     [171305] = true, -- Salvaged Cache of Goods
     [210063] = true, -- Invader's Satchel of Helpful Goods
@@ -29,8 +29,12 @@ items.openables = {
     -- Loamm
     [205257] = true, -- Clinking Dirt-Covered Pouch
     [205964] = true, -- Small Loammian Supply Pack
+    [205983] = true, -- Scentsational Niffen Treasures
     -- Dream
+    [210180] = true, -- Emerald Flightstone
     [210872] = true, -- Satchel of Dreams
+    [210917] = true, -- Pouch of Whelping's Dreaming Crests
+    [210992] = true, -- Overflowing Dream Warden Trove
     [211389] = true, -- Cache of Overblooming Treasures
     [211394] = true, -- Harvested Dreamseed Cache
     [211411] = true, -- Sprouting Dreamtrove
@@ -60,8 +64,8 @@ items.dragonflight = {
     -- Dragonflight Profession Knowledge
     knowledge = {
         -- Mining
-        [194062] = true, -- Unyielding Stone Chunk (+1)
         [194039] = true, -- Heated Ore Sample (+1)
+        [194062] = true, -- Unyielding Stone Chunk (+1)
         [201300] = true, -- Iridescent Ore Fragments (+1)
         -- Herbalism
         [200677] = true, -- Dreambloom Petal (+1)
@@ -70,7 +74,16 @@ items.dragonflight = {
         -- Alchemy
         [198608] = true, -- Alchemy Notes (+3)
         -- Tailoring
+        [198684] = true, -- Miniature Bronze Dragonflight Banner (+3)
+        [201715] = true, -- Notebook of Crafting Knowledge (+5)
+        [205355] = true, -- Niffen Notebook of Tailoring Knowledge (+10)
         [206025] = true, -- Used Medical Wrap Kit (+3)
+        -- Engineering
+        [193902] = true, -- Eroded Titan Gizmo (+1)
+        -- Enchanting
+        [193900] = true, -- Prismatic Focusing Shard (+1)
+        [198968] = true, -- Primalist Charm (+1)
+        [205351] = true, -- Niffen Notebook of Enchanting Knowledge (+10)
     },
 }
 
