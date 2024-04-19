@@ -40,6 +40,12 @@ items.openables = {
     [211411] = true, -- Sprouting Dreamtrove
     [211413] = true, -- Budding Dreamtrove
     [211414] = true, -- Blossoming Dreamtrove
+
+    -- PvP
+    [201250] = true, -- Victorious Contender's Strongbox
+
+    -- Clams
+    [198395] = true, -- Dull Spined Clam
 }
 
 -- Lockboxes
