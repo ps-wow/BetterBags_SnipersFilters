@@ -6,6 +6,7 @@ local items = {}
 
 -- Categories
 items.openables = {
+    [17964]  = true, -- Gray Sack of Gems
     [17965]  = true, -- Yellow Sack of Gems
     [49294]  = true, -- Ashen Sack of Gems
 
@@ -16,6 +17,13 @@ items.openables = {
     [171305] = true, -- Salvaged Cache of Goods
     [210063] = true, -- Invader's Satchel of Helpful Goods
     
+    -- WoD Garrison
+    [139593] = true, -- Sack of Salvaged Goods (Salvage Yard)
+    [116980] = true, -- Invader's Forgotten Treasure
+    [122163] = true, -- Routed Invader's Crate of Spoils
+    [120319] = true, -- Invader's Damaged Cache
+    [120320] = true, -- Invader's Abandoned Sack
+
     -- Assault NZoth
     [173372] = true, -- Cache of the Black Empire
     [174958] = true, -- Cache of the Fallen Mogu
