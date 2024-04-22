@@ -71,8 +71,26 @@ items.lockboxes = {
     [190954] = true, -- Serevite Lockbox
 }
 
+-- Darkmoon Faire
+items.darkmoonFaire = {
+    [71083] = true, -- Darkmoon Game Token
+    [71634] = true, -- Darkmoon Adventurer's Guide
+    [71635] = true, -- Imbued Crystal
+    [71636] = true, -- Monstrous Egg
+    [71637] = true, -- Mysterious Grimoire
+    [71638] = true, -- Ornate Weapon
+}
+
+-- Account Bound Rep Items
+items.accountBoundRep = {
+    [208952] = true, -- Soridormi's Letter of Commendation
+    [200454] = true, -- Maruuk Centaur Insignia
+}
+
+-- Dragonflight
 items.dragonflight = {
     sparks = {
+        [190453] = true, -- Spark of Ingenuity
         [206959] = true, -- Spark of Dreams (10.2)
     },
     -- Dragonflight Profession Knowledge
@@ -99,24 +117,18 @@ items.dragonflight = {
         [198968] = true, -- Primalist Charm (+1)
         [205351] = true, -- Niffen Notebook of Enchanting Knowledge (+10)
     },
+    emeraldDream = {
+        seeds = {
+            [208066] = true, -- Small Dreamseed
+            [208067] = true, -- Plump Dreamseed
+            [208047] = true, -- Gigantic Dreamseed
+        }
+    }
 }
 
-
-
--- Darkmoon Faire
-items.darkmoonFaire = {
-    [71083] = true, -- Darkmoon Game Token
-    [71634] = true, -- Darkmoon Adventurer's Guide
-    [71635] = true, -- Imbued Crystal
-    [71636] = true, -- Monstrous Egg
-    [71637] = true, -- Mysterious Grimoire
-    [71638] = true, -- Ornate Weapon
-}
-
--- Account Bound Rep Items
-items.accountBoundRep = {
-    [208952] = true, -- Soridormi's Letter of Commendation
-    [200454] = true, -- Maruuk Centaur Insignia
+-- War Within
+items.warwithin = {
+    knowledge = {},
 }
 
 -- Initialise

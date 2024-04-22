@@ -140,7 +140,7 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
     local quality = data.itemInfo.itemQuality
 
     if quality == QUALITY_HEIRLOOM then
-        return "Heirloom"
+        return "01. Heirloom"
     end
 
     -- If item has expacID
@@ -149,12 +149,12 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
         if data.itemInfo.expacID == LEGION then
             -- Legendaries
             if data.itemInfo.itemQuality == QUALITY_LEGENDARY then
-                return "Legion Legendary"
+                return "01. Legion Legendary"
             end
 
             -- Artifact Weapons
             if data.itemInfo.itemQuality == QUALITY_ARTIFACT then
-                return "Legion Artifact"
+                return "01. Legion Artifact"
             end
 
             -- Artifact Relics => Junk
@@ -167,30 +167,30 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
         if data.itemInfo.expacID == SHADOWLANDS then
             -- Legendaries
             if data.itemInfo.itemQuality == QUALITY_LEGENDARY then
-                return "Shadowlands Legendary"
+                return "01. Shadowlands Legendary"
             end
         end
 
         -- All previous expansions
         if data.itemInfo.expacID < CURRENT_EXPANSION then
             if itemType == "Tradeskill" then
-                return "Legacy Tradeskill"
+                return "02. Legacy Tradeskill"
             end
 
             if itemType == "Armor" then
-                if SSF_ItemHasText(itemID, 'Priest') then return "Priest (Legacy)" end
-                if SSF_ItemHasText(itemID, 'Mage') then return "Mage (Legacy)" end
-                if SSF_ItemHasText(itemID, 'Warlock') then return "Warlock (Legacy)" end
-                if SSF_ItemHasText(itemID, 'Druid') then return "Druid (Legacy)" end
-                if SSF_ItemHasText(itemID, 'Rogue') then return "Rogue (Legacy)" end
-                if SSF_ItemHasText(itemID, 'Demon Hunter') then return "Demon Hunter (Legacy)" end
-                if SSF_ItemHasText(itemID, 'Monk') then return "Monk (Legacy)" end
-                if SSF_ItemHasText(itemID, 'Hunter') then return "Hunter (Legacy)" end
-                if SSF_ItemHasText(itemID, 'Shaman') then return "Shaman (Legacy)" end
-                if SSF_ItemHasText(itemID, 'Evoker') then return "Evoker (Legacy)" end
-                if SSF_ItemHasText(itemID, 'Death Knight') then return "Death Knight (Legacy)" end
-                if SSF_ItemHasText(itemID, 'Warrior') then return "Warrior (Legacy)" end
-                if SSF_ItemHasText(itemID, 'Paladin') then return "Paladin (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Priest') then return "01. Priest (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Mage') then return "01. Mage (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Warlock') then return "01. Warlock (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Druid') then return "01. Druid (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Rogue') then return "01. Rogue (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Demon Hunter') then return "01. Demon Hunter (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Monk') then return "01. Monk (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Hunter') then return "01. Hunter (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Shaman') then return "01. Shaman (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Evoker') then return "01. Evoker (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Death Knight') then return "01. Death Knight (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Warrior') then return "01. Warrior (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Paladin') then return "01. Paladin (Legacy)" end
             end
 
             -- All low ilvl items can go to junk if not mog
@@ -213,33 +213,31 @@ end)
 
 -- Openables
 for itemID in pairs(addon.db.openables) do
-    categories:AddItemToCategory(itemID, "Open")
+    categories:AddItemToCategory(itemID, "00. Open")
 end
 
 -- Account Bound Reputation
 for itemID in pairs(addon.db.accountBoundRep) do
-    categories:AddItemToCategory(itemID, "Reputation")
+    categories:AddItemToCategory(itemID, "00. Reputation")
 end
 
 -- Lockboxes
 for itemID in pairs(addon.db.lockboxes) do
-    categories:AddItemToCategory(itemID, "Lockboxes")
+    categories:AddItemToCategory(itemID, "00. Lockboxes")
 end
 
--- Dragonflight Profession Sparks
-for itemID in pairs(addon.db.dragonflight.sparks) do
-    categories:AddItemToCategory(itemID, "DF Sparks")
-end
-
--- Dragonflight Profession Knowledge
-for itemID in pairs(addon.db.dragonflight.knowledge) do
-    categories:AddItemToCategory(itemID, "DF Knowledge")
-end
+-- Dragonflight
+--- Sparks
+for itemID in pairs(addon.db.dragonflight.sparks) do categories:AddItemToCategory(itemID, "10. DF Sparks") end
+--- Profession Knowledge
+for itemID in pairs(addon.db.dragonflight.knowledge) do categories:AddItemToCategory(itemID, "10. DF Knowledge") end
+--- Dream Seeds
+for itemID in pairs(addon.db.dragonflight.emeraldDream.seeds) do categories:AddItemToCategory(itemID, "10. Seeds") end
 
 -- Event: Love is in the Air
-categories:AddItemToCategory(49927, "Love is in the Air") -- Love Token
+categories:AddItemToCategory(49927, "01. Love is in the Air") -- Love Token
 
 -- Darkmoon Faire
 for itemID in pairs(addon.db.darkmoonFaire) do
-    categories:AddItemToCategory(itemID, "Darkmoon Faire")
+    categories:AddItemToCategory(itemID, "01. Darkmoon Faire")
 end
