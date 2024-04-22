@@ -23,6 +23,7 @@ local WARWITHIN = 10
 local QUALITY_LEGENDARY = 5
 local QUALITY_ARTIFACT = 6
 local QUALITY_HEIRLOOM = 7
+-- Transient Values
 local DUNGEON_NORMAL_LOOT = 421
 
 local function Debug(obj, desc)
@@ -93,34 +94,26 @@ local function SSF_GetRealILVL(item)
 	end
 end
 
-local function SSF_ItemHasStat(item, stat)
-    local hasStat = false
+local function SSF_ItemHasText(itemID, text)
+    local hasText = false
+    local tooltip = C_TooltipInfo.GetItemByID(itemID)
 
-	if item ~= nil then
-		tooltip = tooltip or CreateEmptyTooltip()
-		tooltip:ClearLines()
-		tooltip:SetHyperlink(item)
-
-        if tooltip.processingInfo == nil then return false end
-        local lines = tooltip.processingInfo.tooltipData.lines
-        if lines == nil then return false end
-
-        for i=1,12 do
-            if lines[i] ~= nil then
-                if lines[i].leftText ~= nil then
-                    local t = lines[i].leftText
-                    if t:match(stat) ~= nil then
-                        hasStat = true
-                        return true
-                    end
-                end
+    for k,v in pairs(tooltip.lines) do
+        if v.leftText ~= nil then
+            if v.leftText:match(text) then
+                hasText = true
+                return true
             end
         end
+        if v.rightText ~= nil then
+            if v.rightText:match(text) then
+                hasText = true
+                return true
+            end
+        end
+    end
 
-		tooltip:Hide()
-	end
-
-	return hasStat
+    return hasText
 end
 
 -- Neck/Ring/Cloak
@@ -141,9 +134,12 @@ local function IsJewelry(itemInfo)
 end
 
 categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
+    local item = data.itemInfo.itemLink
+    local itemType = data.itemInfo.itemType
     local itemID = data.itemInfo.itemID
+    local quality = data.itemInfo.itemQuality
 
-    if data.itemInfo.itemQuality == QUALITY_HEIRLOOM then
+    if quality == QUALITY_HEIRLOOM then
         return "Heirloom"
     end
 
@@ -177,12 +173,28 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
 
         -- All previous expansions
         if data.itemInfo.expacID < CURRENT_EXPANSION then
-            if data.itemInfo.itemType == "Tradeskill" then
+            if itemType == "Tradeskill" then
                 return "Legacy Tradeskill"
             end
 
+            if itemType == "Armor" then
+                if SSF_ItemHasText(itemID, 'Priest') then return "Priest (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Mage') then return "Mage (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Warlock') then return "Warlock (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Druid') then return "Druid (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Rogue') then return "Rogue (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Demon Hunter') then return "Demon Hunter (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Monk') then return "Monk (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Hunter') then return "Hunter (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Shaman') then return "Shaman (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Evoker') then return "Evoker (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Death Knight') then return "Death Knight (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Warrior') then return "Warrior (Legacy)" end
+                if SSF_ItemHasText(itemID, 'Paladin') then return "Paladin (Legacy)" end
+            end
+
             -- All low ilvl items can go to junk if not mog
-            local realILevel = SSF_GetRealILVL(data.itemInfo.itemLink)
+            local realILevel = SSF_GetRealILVL(item)
             if realILevel == 0 then
                 return
             else
@@ -192,12 +204,6 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
                     -- Neck/Ring/Trinket -> Junk
                     if IsJewelry(data.itemInfo) then
                         return "Junk"
-                    end
-
-                    if CanIMogIt ~= nil then
-                        if CanIMogIt:PlayerKnowsTransmog(itemLink) then
-                            return "Junk"
-                        end
                     end
                 end
             end
