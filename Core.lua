@@ -226,6 +226,14 @@ for itemID in pairs(addon.db.lockboxes) do
     categories:AddItemToCategory(itemID, "00. Lockboxes")
 end
 
+-- Event: Love is in the Air
+categories:AddItemToCategory(49927, "01. Love is in the Air") -- Love Token
+
+-- Event: Darkmoon Faire
+for itemID in pairs(addon.db.darkmoonFaire) do
+    categories:AddItemToCategory(itemID, "01. Darkmoon Faire")
+end
+
 -- Dragonflight
 --- Sparks
 for itemID in pairs(addon.db.dragonflight.sparks) do categories:AddItemToCategory(itemID, "10. DF Sparks") end
@@ -234,10 +242,3 @@ for itemID in pairs(addon.db.dragonflight.knowledge) do categories:AddItemToCate
 --- Dream Seeds
 for itemID in pairs(addon.db.dragonflight.emeraldDream.seeds) do categories:AddItemToCategory(itemID, "10. Seeds") end
 
--- Event: Love is in the Air
-categories:AddItemToCategory(49927, "01. Love is in the Air") -- Love Token
-
--- Darkmoon Faire
-for itemID in pairs(addon.db.darkmoonFaire) do
-    categories:AddItemToCategory(itemID, "01. Darkmoon Faire")
-end
