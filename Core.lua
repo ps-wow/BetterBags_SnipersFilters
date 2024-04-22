@@ -226,13 +226,9 @@ for itemID in pairs(addon.db.lockboxes) do
     categories:AddItemToCategory(itemID, "00. Lockboxes")
 end
 
--- Event: Love is in the Air
-categories:AddItemToCategory(49927, "01. Love is in the Air") -- Love Token
-
--- Event: Darkmoon Faire
-for itemID in pairs(addon.db.darkmoonFaire) do
-    categories:AddItemToCategory(itemID, "01. Darkmoon Faire")
-end
+-- Events
+for itemID in pairs(addon.db.events.darkmoonFaire) do categories:AddItemToCategory(itemID, "01. Darkmoon Faire") end
+for itemID in pairs(addon.db.events.loveIsInTheAir) do categories:AddItemToCategory(itemID, "01. Love is in the Air") end
 
 -- Dragonflight
 --- Sparks
