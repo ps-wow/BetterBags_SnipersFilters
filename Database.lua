@@ -12,7 +12,8 @@ items.openables = {
 
     -- Random Dungeons
     [156682] = true, -- Otherworldly Satchel of Helpful Goods
-    [156683] = true, -- Satchel of Helpful Goods
+    [156683] = true, -- Satchel of Helpful Goods (WoW)
+    [156689] = true, -- Scorched Satchel of Helpful Goods (Cata)
     [156698] = true, -- Tranquil Satchel of Helpful Goods
     [171305] = true, -- Salvaged Cache of Goods
     [210063] = true, -- Invader's Satchel of Helpful Goods
@@ -53,6 +54,7 @@ items.openables = {
     [201250] = true, -- Victorious Contender's Strongbox
 
     -- Clams
+    [24476]  = true, -- Jaggal Clam (TBC)
     [198395] = true, -- Dull Spined Clam
 }
 
@@ -96,10 +98,14 @@ items.accountBoundRep = {
 items.dragonflight = {
     sparks = {
         [190453] = true, -- Spark of Ingenuity
+        [204717] = true, -- Splintered Spark of Shadowflame
         [206959] = true, -- Spark of Dreams (10.2)
+        [208396] = true, -- Splintered Spark of Dreams (10.2)
+        [211515] = true, -- Splintered Spark of Awakening (10.2 S4)
     },
     -- Dragonflight Profession Knowledge
     knowledge = {
+        [191784] = true, -- Dragon Shard of Knowledge
         -- Mining
         [194039] = true, -- Heated Ore Sample (+1)
         [194062] = true, -- Unyielding Stone Chunk (+1)
@@ -109,6 +115,7 @@ items.dragonflight = {
         -- Skinning
         [198837] = true, -- Curious Hide Scraps (+1)
         -- Alchemy
+        [198964] = true, -- Elementious Splinter (+1)
         [198608] = true, -- Alchemy Notes (+3)
         -- Tailoring
         [198684] = true, -- Miniature Bronze Dragonflight Banner (+3)
