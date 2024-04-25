@@ -10,5 +10,6 @@
 ## X-Category: Bags & Inventory
 ## Dependencies: BetterBags
 
+dragonflight/dragonflight.lua
 Database.lua
 Core.lua
