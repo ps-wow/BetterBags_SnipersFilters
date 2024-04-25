@@ -4,6 +4,7 @@ addon.dragonflight = {
     openables = {
         [189765] = true, -- Maruuk Centaur Supply Satchel
         [198866] = true, -- Small Iskaaran Supply Pack
+        [198868] = true, -- Small Valdrakken Accord Supply Pack
         [200072] = true, -- Dragonbane Keep Strongbox
         [200073] = true, -- Valdrakken Treasures
         [200468] = true, -- Grand Hunt Spoils
