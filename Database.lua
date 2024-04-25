@@ -35,6 +35,7 @@ items.openables = {
     [207582] = true, -- Box of Tampered Reality
     [207584] = true, -- Box of Volatile Reality
     [209837] = true, -- Faint Whispers of Dreaming
+    [215362] = true, -- Cache of Storms
     -- Loamm
     [205257] = true, -- Clinking Dirt-Covered Pouch
     [205964] = true, -- Small Loammian Supply Pack
