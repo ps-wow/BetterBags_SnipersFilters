@@ -30,6 +30,7 @@ addon.dragonflight = {
         -- S4
         [217109] = true, -- Cache of Awakened Storms
         [217242] = true, -- Awakening Stone Wing
+        [217728] = true, -- Cache of Awakened Treasures
     },
     sparks = {
         [190453] = true, -- Spark of Ingenuity
