@@ -9,6 +9,7 @@ items.openables = {
     [17964]  = true, -- Gray Sack of Gems
     [17965]  = true, -- Yellow Sack of Gems
     [49294]  = true, -- Ashen Sack of Gems
+    [89810]  = true, -- Bounty of a Sundered Land
 
     -- Random Dungeons
     [156682] = true, -- Otherworldly Satchel of Helpful Goods

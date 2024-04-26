@@ -13,6 +13,7 @@ addon.dragonflight = {
         [207584] = true, -- Box of Volatile Reality
         [209837] = true, -- Faint Whispers of Dreaming
         [215362] = true, -- Cache of Storms
+        [202098] = true, -- Crowded Crate of Mined Materials
         -- Loamm
         [205257] = true, -- Clinking Dirt-Covered Pouch
         [205964] = true, -- Small Loammian Supply Pack
@@ -38,6 +39,7 @@ addon.dragonflight = {
         [206959] = true, -- Spark of Dreams (10.2)
         [208396] = true, -- Splintered Spark of Dreams (10.2)
         [211515] = true, -- Splintered Spark of Awakening (10.2 S4)
+        [211516] = true, -- Spark of Awakening (10.2 S4)
     },
     -- Dragonflight Profession Knowledge
     knowledge = {
@@ -65,6 +67,8 @@ addon.dragonflight = {
         [193900] = true, -- Prismatic Focusing Shard (+1)
         [198968] = true, -- Primalist Charm (+1)
         [205351] = true, -- Niffen Notebook of Enchanting Knowledge (+10)
+        -- Blacksmithing
+        [201005] = true, -- Curious Ingots (+3)
     },
     emeraldDream = {
         seeds = {
