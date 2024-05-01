@@ -143,6 +143,10 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
         return "01. Heirloom"
     end
 
+    if SSF_ItemHasText(itemID, "Cosmetic") then
+        return "Cosmetic"
+    end
+
     -- If item has expacID
     if data.itemInfo.expacID ~= nil then
         -- 07. Legion 
