@@ -10,9 +10,12 @@ addon.dragonflight = {
         [200468] = true, -- Grand Hunt Spoils
         [202172] = true, -- Overflowing Satchel of Coins
         [207582] = true, -- Box of Tampered Reality
+        [207583] = true, -- Box of Collapsed Reality
         [207584] = true, -- Box of Volatile Reality
+        [208090] = true, -- Contained Paracausality
         [209837] = true, -- Faint Whispers of Dreaming
         [215362] = true, -- Cache of Storms
+        [215363] = true, -- Cache of Embers
         [202098] = true, -- Crowded Crate of Mined Materials
         -- Loamm
         [205257] = true, -- Clinking Dirt-Covered Pouch
