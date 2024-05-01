@@ -71,6 +71,7 @@ addon.dragonflight = {
         [198968] = true, -- Primalist Charm (+1)
         [205351] = true, -- Niffen Notebook of Enchanting Knowledge (+10)
         -- Blacksmithing
+        [192131] = true, -- Valdrakken Weapon Chain (+1)
         [201005] = true, -- Curious Ingots (+3)
     },
     emeraldDream = {
