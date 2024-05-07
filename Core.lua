@@ -235,6 +235,8 @@ for itemID in pairs(addon.db.events.darkmoonFaire) do categories:AddItemToCatego
 for itemID in pairs(addon.db.events.loveIsInTheAir) do categories:AddItemToCategory(itemID, "01. Love is in the Air") end
 
 -- Dragonflight
+--- Reputation
+for itemID in pairs(addon.dragonflight.reputation) do categories:AddItemToCategory(itemID, "10. Reputation") end
 --- Sparks
 for itemID in pairs(addon.dragonflight.sparks) do categories:AddItemToCategory(itemID, "10. DF Sparks") end
 --- Profession Knowledge

@@ -1,6 +1,9 @@
 local _, addon = ...
 
 addon.dragonflight = {
+    reputation = {
+        [211417] = true, -- Dream Wardens Insignia (+1000)
+    },
     openables = {
         [189765] = true, -- Maruuk Centaur Supply Satchel
         [198866] = true, -- Small Iskaaran Supply Pack
@@ -65,6 +68,7 @@ addon.dragonflight = {
         [201715] = true, -- Notebook of Crafting Knowledge (+5)
         [205355] = true, -- Niffen Notebook of Tailoring Knowledge (+10)
         [206025] = true, -- Used Medical Wrap Kit (+3)
+        [210461] = true, -- Exceedingly Soft Wildercloth (+3)
         -- Engineering
         [193902] = true, -- Eroded Titan Gizmo (+1)
         [198970] = true, -- Infinitely Attachable Pair o' Docks (+1)
