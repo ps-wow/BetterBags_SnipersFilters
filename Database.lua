@@ -72,6 +72,7 @@ items.events = {
 items.accountBoundRep = {
     [208952] = true, -- Soridormi's Letter of Commendation
     [200454] = true, -- Maruuk Centaur Insignia
+    [210421] = true, -- Dream Wardens Insignia
 }
 
 -- War Within

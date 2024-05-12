@@ -35,6 +35,7 @@ addon.dragonflight = {
         [211411] = true, -- Sprouting Dreamtrove
         [211413] = true, -- Budding Dreamtrove
         [211414] = true, -- Blossoming Dreamtrove
+        [215364] = true, -- Cache of Dreams
         -- S4
         [217109] = true, -- Cache of Awakened Storms
         [217110] = true, -- Cache of Awakened Embers
