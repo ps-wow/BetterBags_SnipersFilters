@@ -61,6 +61,13 @@ addon.dragonflight = {
         [200677] = true, -- Dreambloom Petal (+1)
         -- Skinning
         [198837] = true, -- Curious Hide Scraps (+1)
+        [198841] = true, -- Large Sample of Curious Hide (+2)
+        -- Leatherworking
+        [198976] = true, -- Exceedingly Soft Skin (+1)
+        [193910] = true, -- Molted Dragon Scales (+1)
+        [193913] = true, -- Preserved Animal Parts (+1)
+        [198613] = true, -- Leatherworking Designs (+3)
+        [204986] = true, -- Flame-Infused Scale Oil (+3)
         -- Alchemy
         [198964] = true, -- Elementious Splinter (+1)
         [198608] = true, -- Alchemy Notes (+3)
