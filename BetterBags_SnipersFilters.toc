@@ -1,4 +1,4 @@
-## Interface: 100206
+## Interface: 100207
 ## Title: BetterBags - Sniper's Filters
 ## Notes: Various filters for BetterBags
 
@@ -11,5 +11,13 @@
 ## Dependencies: BetterBags
 
 dragonflight/dragonflight.lua
+dragonflight/openables.lua
+dragonflight/renown.lua
+dragonflight/knowledge.lua
+
+warwithin/warwithin.lua
+warwithin/knowledge.lua
+warwithin/renown.lua
+
 Database.lua
 Core.lua

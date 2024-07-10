@@ -236,7 +236,7 @@ for itemID in pairs(addon.db.events.loveIsInTheAir) do categories:AddItemToCateg
 
 -- Dragonflight
 --- Reputation
-for itemID in pairs(addon.dragonflight.reputation) do categories:AddItemToCategory(itemID, "10. Reputation") end
+for itemID in pairs(addon.dragonflight.renown) do categories:AddItemToCategory(itemID, "10. Renown") end
 --- Sparks
 for itemID in pairs(addon.dragonflight.sparks) do categories:AddItemToCategory(itemID, "10. DF Sparks") end
 --- Profession Knowledge
@@ -246,3 +246,8 @@ for itemID in pairs(addon.dragonflight.emeraldDream.seeds) do categories:AddItem
 --- Openables
 for itemID in pairs(addon.dragonflight.openables) do categories:AddItemToCategory(itemID, "00. Open") end
 
+-- War Within
+--- Renown
+for itemID in pairs(addon.warwithin.renown) do categories:AddItemToCategory(itemID, "11. Renown") end
+--- Profession Knowledge
+for itemID in pairs(addon.dragonflight.knowledge) do categories:AddItemToCategory(itemID, "11. Knowledge") end
