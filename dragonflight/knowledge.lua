@@ -37,6 +37,7 @@ addon.dragonflight.knowledge = {
 
     -- Enchanting
     [193900] = true, -- Prismatic Focusing Shard (+1)
+    [198967] = true, -- Primordial Aether (+1)
     [198968] = true, -- Primalist Charm (+1)
     [205351] = true, -- Niffen Notebook of Enchanting Knowledge (+10)
 
@@ -68,10 +69,13 @@ addon.dragonflight.knowledge = {
 
 
     -- Tailoring
+    [198680] = true, -- Decaying Brackenhide Blanket (+3)
     [198684] = true, -- Miniature Bronze Dragonflight Banner (+3)
-    [201715] = true, -- Notebook of Crafting Knowledge (+5)
-    [205355] = true, -- Niffen Notebook of Tailoring Knowledge (+10)
+    [198978] = true, -- Stupidly Effective Stitchery (+1)
+    [193898] = true, -- Umbral Bone Needle (+1)
     [206025] = true, -- Used Medical Wrap Kit (+3)
     [210461] = true, -- Exceedingly Soft Wildercloth (+3)
+    [201715] = true, -- Notebook of Crafting Knowledge (+5)
+    [205355] = true, -- Niffen Notebook of Tailoring Knowledge (+10)
 
 }
