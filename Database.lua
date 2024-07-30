@@ -75,10 +75,5 @@ items.accountBoundRep = {
     [210421] = true, -- Dream Wardens Insignia
 }
 
--- War Within
-items.warwithin = {
-    knowledge = {},
-}
-
 -- Initialise
 addon.db = items
