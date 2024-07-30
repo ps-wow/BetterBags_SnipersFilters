@@ -8,7 +8,6 @@ local categories = BetterBags:GetModule("Categories")
 ---@type string, AddonNS
 local _, addon = ...
 
-local CURRENT_EXPANSION = 9
 local WOW = 0
 local TBC = 1
 local WRATH = 2
@@ -23,8 +22,15 @@ local WARWITHIN = 10
 local QUALITY_LEGENDARY = 5
 local QUALITY_ARTIFACT = 6
 local QUALITY_HEIRLOOM = 7
+local CURRENT_EXPANSION = 9
+
 -- Transient Values
-local DUNGEON_NORMAL_LOOT = 421
+local DUNGEON_NORMAL_LOOT = 554 -- War Within
+local DUNGEON_HEROIC_LOOT = 580 -- War Within
+local DUNGEON_M0_LOOT = 597 -- War Within
+local RAID_NORMAL_LOOT = 597 -- War Within
+local RAID_HEROIC_LOOT = 610 -- War Within
+local RAID_MYTHIC_LOOT = 623 -- War Within
 
 local function Debug(obj, desc)
     if ViragDevTool_AddData then
@@ -195,6 +201,7 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
                 if SSF_ItemHasText(itemID, 'Death Knight') then return "01. Death Knight (Legacy)" end
                 if SSF_ItemHasText(itemID, 'Warrior') then return "01. Warrior (Legacy)" end
                 if SSF_ItemHasText(itemID, 'Paladin') then return "01. Paladin (Legacy)" end
+                
             end
 
             -- All low ilvl items can go to junk if not mog
@@ -203,12 +210,13 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
                 return
             else
                 if realILevel < DUNGEON_NORMAL_LOOT then
-                    -- Low Item Level
-
                     -- Neck/Ring/Trinket -> Junk
                     if IsJewelry(data.itemInfo) then
                         return "Junk"
                     end
+
+                    -- Low Item Level
+                    return "01. Legacy Armor"
                 end
             end
         end
