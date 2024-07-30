@@ -235,7 +235,7 @@ end
 
 -- Lockboxes
 for itemID in pairs(addon.db.lockboxes) do
-    categories:AddItemToCategory(itemID, "00. Open")
+    categories:AddItemToCategory(itemID, "00. Lockboxes")
 end
 
 -- Events
