@@ -16,6 +16,7 @@ dragonflight/renown.lua
 dragonflight/knowledge.lua
 
 warwithin/warwithin.lua
+warwithin/openables.lua
 warwithin/knowledge.lua
 warwithin/renown.lua
 
