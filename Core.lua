@@ -235,7 +235,7 @@ end
 
 -- Lockboxes
 for itemID in pairs(addon.db.lockboxes) do
-    categories:AddItemToCategory(itemID, "00. Lockboxes")
+    categories:AddItemToCategory(itemID, "00. Open")
 end
 
 -- Events
@@ -259,3 +259,5 @@ for itemID in pairs(addon.dragonflight.openables) do categories:AddItemToCategor
 for itemID in pairs(addon.warwithin.renown) do categories:AddItemToCategory(itemID, "11. Renown") end
 --- Profession Knowledge
 for itemID in pairs(addon.dragonflight.knowledge) do categories:AddItemToCategory(itemID, "11. Knowledge") end
+--- Openables
+for itemID in pairs(addon.warwithin.openables) do categories:AddItemToCategory(itemID, "00. Open") end
