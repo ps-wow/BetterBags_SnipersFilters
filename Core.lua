@@ -258,6 +258,6 @@ for itemID in pairs(addon.dragonflight.openables) do categories:AddItemToCategor
 --- Renown
 for itemID in pairs(addon.warwithin.renown) do categories:AddItemToCategory(itemID, "11. Renown") end
 --- Profession Knowledge
-for itemID in pairs(addon.dragonflight.knowledge) do categories:AddItemToCategory(itemID, "11. Knowledge") end
+for itemID in pairs(addon.warwithin.knowledge) do categories:AddItemToCategory(itemID, "11. Knowledge") end
 --- Openables
 for itemID in pairs(addon.warwithin.openables) do categories:AddItemToCategory(itemID, "00. Open") end
