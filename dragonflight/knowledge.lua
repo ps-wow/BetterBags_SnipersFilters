@@ -42,18 +42,19 @@ addon.dragonflight.knowledge = {
     [205351] = true, -- Niffen Notebook of Enchanting Knowledge (+10)
 
     -- Leatherworking
-    [198976] = true, -- Exceedingly Soft Skin (+1)
     [193910] = true, -- Molted Dragon Scales (+1)
     [193913] = true, -- Preserved Animal Parts (+1)
+    [198976] = true, -- Exceedingly Soft Skin (+1)
     [198613] = true, -- Leatherworking Designs (+3)
     [198711] = true, -- Poacher's Pack (+3)
     [198667] = true, -- Spare Djaradin Tools (+3)
-    [198696] = true, -- Wind-Blessed Hide (+3)
     [198658] = true, -- Decay-Infused Tanning Oil (+3)
     [198683] = true, -- Treated Hides (+3)
-    [204988] = true, -- Sulfur-Soaked Skins (+3)
     [198690] = true, -- Decayed Scales (+3)
+    [198696] = true, -- Wind-Blessed Hide (+3)
+    [204988] = true, -- Sulfur-Soaked Skins (+3)
     [201018] = true, -- Well-Danced Drum (+3)
+    [201713] = true, -- Notebook of Crafting Knowledge (+5)
     [204986] = true, -- Flame-Infused Scale Oil (+3)
     [204987] = true, -- Lava-Forged Leatherworker's "Knife" (+3)
     --- Emerald Dream
