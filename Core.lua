@@ -12,20 +12,10 @@ local AceDB = LibStub("AceDB-3.0")
 local _, addon = ...
 
 local C = addon.C
+local T = addon.T
 
 local suffix = " (SF)"
 
-local WOW = 0
-local TBC = 1
-local WRATH = 2
-local CATA = 3
-local MOP = 4
-local WOD = 5
-local LEGION = 6
-local BFA = 7
-local SHADOWLANDS = 8
-local DRAGONFLIGHT = 9
-local WARWITHIN = 10
 local CURRENT_EXPANSION = 9
 
 -- Transient Values
@@ -72,6 +62,9 @@ local defaults = {
             openables = {
                 prefix = "00. "
             }
+        },
+        legacy = {
+            armor = "junk"
         },
         dragonflight = {
             sparks = true,
@@ -184,6 +177,36 @@ local configOptions = {
                 end
             },
         }
+    },
+    legacy = {
+        name = L:G("Legacy"),
+        type = "group",
+        order = 10,
+        inline = true,
+        args = {
+            armor = {
+                type = "select",
+                name = "Armor",
+                desc = "How should legacy armor appear in BetterBags.",
+                values = {
+                    armor = "Armor",
+                    junk = "Junk",
+                    classjunk = "Class or Junk"
+                },
+                style = "dropdown",
+                get = function(info)
+                    return db.legacy.armor
+                end,
+                set = function(info, value)
+                    db.legacy.armor = value
+                    Events:SendMessage('bags/FullRefreshAll')
+                end
+            }   
+        }
+    },
+    expansionHeader = {
+        type = "header",
+        name = "Expansions"
     },
     dragonflight = {
         name = L:G("10. Dragonflight"),
@@ -384,6 +407,7 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
     local itemType = data.itemInfo.itemType
     local itemID = data.itemInfo.itemID
     local quality = data.itemInfo.itemQuality
+    local currentExpansion = GetServerExpansionLevel()
 
     if quality == C.ITEM.QUALITY.HEIRLOOM then
         return BuildCategoryName("01. ", "Heirloom")
@@ -393,6 +417,9 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
         return BuildCategoryName("00. ", "Cosmetic")
     end
 
+    if data.itemInfo.itemSubType == "Artifact Relic" then
+        return "Junk"
+    end
 
     -- Legendaries by Expansion
     if data.itemInfo.expacID ~= nil then
@@ -406,16 +433,11 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
                 return BuildCategoryName(addon.Utils.PrefixFromExpacID(data.itemInfo.expacID), "Artifact")
             end
         end
-
-        if data.itemInfo.itemSubType == "Artifact Relic" .. suffix then
-            return "Junk"
-        end
     end
 
     -- If item has expacID
     if data.itemInfo.expacID ~= nil then
-
-        -- Current Expansion
+        -- 11. War Within
 
         -- 10. Dragonflight
         if data.itemInfo.expacID == DRAGONFLIGHT then
@@ -429,19 +451,22 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
         end
 
         -- All previous expansions
-        if data.itemInfo.expacID < CURRENT_EXPANSION then
+        if data.itemInfo.expacID < currentExpansion then
             if itemType == "Tradeskill" then
                 return BuildCategoryName("02. ", "Legacy Tradeskill")
             end
 
             if itemType == "Armor" then
                 for _, wowclass in ipairs(wowClasses) do
-                    categories:WipeCategory(L:G(SnipersFilters.db.profile.events.prefix .. evt))
-
                     if addon.Utils.Item.HasText(itemID, wowclass) then
-                        return BuildCategoryName("01. ", wowclass .. " (Legacy)")
+                        if db.legacy.armor == "classjunk" then
+                            return BuildCategoryName("01.", wowclass .. " (Legacy)")
+                        end
+                        if db.legacy.armor == "junk" then
+                            return "Junk"
+                        end
+                        return BuildCategoryName("01.", "Armor (Legacy)")
                     end
-
                 end
             end
 
@@ -450,7 +475,7 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
             if realILevel == 0 then
                 return
             else
-                if realILevel < DUNGEON_NORMAL_LOOT then
+                if realILevel < T.DUNGEON_NORMAL_LOOT then
                     -- Neck/Ring/Trinket -> Junk
                     if addon.Utils.Item.IsJewelry(data.itemInfo) then
                         return "Junk"
@@ -458,8 +483,15 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
 
                     -- Low Item Level
                     if itemType == "Armor" then
-                        return BuildCategoryName("01. ", "Legacy Armor")
+                        if db.legacy.armor == "armor" then
+                            return BuildCategoryName("01. ", "Legacy Armor")
+                        end
+                        if db.legacy.armor == "junk" then 
+                            return "Junk"
+                        end
                     end
+
+
                     return BuildCategoryName("01. ", "Legacy")
                 end
             end

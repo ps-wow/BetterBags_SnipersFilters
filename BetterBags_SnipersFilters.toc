@@ -25,5 +25,6 @@ warwithin/renown.lua
 
 Utils.lua
 Constants.lua
+Transients.lua
 Database.lua
 Core.lua
