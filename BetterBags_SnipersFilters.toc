@@ -8,6 +8,8 @@
 ## Author: PrivateSniper
 ## X-Date: 2024-04-06T11:04:40Z
 ## X-Category: Bags & Inventory
+## X-Curse-Project-ID: 1019592
+## X-Wago-ID: QKywr5N7
 ## Dependencies: BetterBags
 
 dragonflight/dragonflight.lua
