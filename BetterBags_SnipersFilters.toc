@@ -16,11 +16,14 @@ dragonflight/dragonflight.lua
 dragonflight/openables.lua
 dragonflight/renown.lua
 dragonflight/knowledge.lua
+dragonflight/warbound.lua
 
 warwithin/warwithin.lua
 warwithin/openables.lua
 warwithin/knowledge.lua
 warwithin/renown.lua
 
+Utils.lua
+Constants.lua
 Database.lua
 Core.lua
