@@ -27,8 +27,8 @@ local RAID_HEROIC_LOOT = 610 -- War Within
 local RAID_MYTHIC_LOOT = 623 -- War Within
 
 local function Debug(obj, desc)
-    if ViragDevTool_AddData then
-        ViragDevTool_AddData(obj, desc)
+    if DevTool then
+        DevTool:AddData(obj, desc)
     end
 end
 
@@ -405,12 +405,29 @@ end
 categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
     local item = data.itemInfo.itemLink
     local itemType = data.itemInfo.itemType
+    local subType = data.itemInfo.itemSubType
     local itemID = data.itemInfo.itemID
     local quality = data.itemInfo.itemQuality
+    local equipLoc = data.itemInfo.itemEquipLoc
     local currentExpansion = GetServerExpansionLevel()
 
+    -- Debug
+    -- if itemID == 218080 then
+    --     Debug(item, "item")
+    --     Debug(data.itemInfo, "data.itemInfo")
+    --     Debug(data.itemInfo.itemEquipLoc, "data.itemInfo.itemEquipLoc")
+    --     Debug(itemType, "itemType")
+    --     Debug(subType, "subType")
+    --     Debug(addon.Utils.GetItemTooltipLines(itemID), "GetItemTooltipLines(itemID)")
+    --     Debug(item, "item")
+    -- end
+
+    if equipLoc == "INVTYPE_TABARD" then
+        return BuildCategoryName("00. ", "Tabards")
+    end
+
     if quality == C.ITEM.QUALITY.HEIRLOOM then
-        return BuildCategoryName("01. ", "Heirloom")
+        return BuildCategoryName("00. ", "Heirloom")
     end
 
     if addon.Utils.Item.HasText(itemID, "Cosmetic") then
@@ -453,19 +470,19 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
         -- All previous expansions
         if data.itemInfo.expacID < currentExpansion then
             if itemType == "Tradeskill" then
-                return BuildCategoryName("02. ", "Legacy Tradeskill")
+                return BuildCategoryName("99. ", "Legacy Tradeskill")
             end
 
             if itemType == "Armor" then
                 for _, wowclass in ipairs(wowClasses) do
                     if addon.Utils.Item.HasText(itemID, wowclass) then
                         if db.legacy.armor == "classjunk" then
-                            return BuildCategoryName("01.", wowclass .. " (Legacy)")
+                            return BuildCategoryName(addon.Utils.PrefixFromExpacID(data.itemInfo.expacID), wowclass .. " (Legacy)")
                         end
                         if db.legacy.armor == "junk" then
                             return "Junk"
                         end
-                        return BuildCategoryName("01.", "Armor (Legacy)")
+                        return BuildCategoryName(addon.Utils.PrefixFromExpacID(data.itemInfo.expacID), "Armor (Legacy)")
                     end
                 end
             end
