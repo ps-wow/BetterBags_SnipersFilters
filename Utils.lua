@@ -7,6 +7,12 @@ local Utils = {
     Item = {}
 }
 
+-- Used for Debugging
+local function GetItemTooltipLines(itemID)
+    local tooltip = C_TooltipInfo.GetItemByID(itemID)
+    return tooltip.lines
+end
+
 local function SSF_ItemHasText(itemID, text)
     local hasText = false
     local tooltip = C_TooltipInfo.GetItemByID(itemID)
@@ -62,6 +68,7 @@ end
 Utils.Item.HasText = SSF_ItemHasText
 Utils.Item.IsJewelry = IsJewelry
 Utils.GetCurrentExpansion = GetCurrentExpansion
+Utils.GetItemTooltipLines = GetItemTooltipLines
 Utils.PrefixFromExpacID = PrefixFromExpacID
 
 addon.Utils = Utils
