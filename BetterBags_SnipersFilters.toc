@@ -1,4 +1,4 @@
-## Interface: 100207
+## Interface: 110000
 ## Title: BetterBags - Sniper's Filters
 ## Notes: Various filters for BetterBags
 
