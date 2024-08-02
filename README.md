@@ -1,6 +1,8 @@
 # BetterBags - Sniper's Filters
 
-[![Publish](https://github.com/ps-wow/BetterBags_SnipersFilters/actions/workflows/main.yml/badge.svg)](https://github.com/ps-wow/BetterBags_SnipersFilters/actions/workflows/main.yml) [Wago](https://addons.wago.io/addons/betterbags-snipersfilters) [CurseForge](https://www.curseforge.com/wow/addons/betterbags-snipers-smart-filters)
+[![Publish](https://github.com/ps-wow/BetterBags_SnipersFilters/actions/workflows/main.yml/badge.svg)](https://github.com/ps-wow/BetterBags_SnipersFilters/actions/workflows/main.yml) [![Wago](https://img.shields.io/badge/wago-222325)](https://addons.wago.io/addons/betterbags-snipersfilters) [![CurseForge](https://img.shields.io/badge/curseforge-F16436)](https://www.curseforge.com/wow/addons/betterbags-snipers-smart-filters)
+
+
 
 "Smart" Filters: (Based on data provided by BetterBags)
 
