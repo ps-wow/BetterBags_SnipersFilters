@@ -34,10 +34,12 @@ local function GetCurrentExpansion()
 end
 
 local function PrefixFromExpacID(expacID)
-    if expacID < 10 then
-        return "0" .. expacID .. "."
+    local patchId = expacID + 1
+
+    if patchId < 10 then
+        return "0" .. patchId .. "."
     end
-    return expacID .. "."
+    return patchId .. "."
 end
 
 -- Neck/Ring/Cloak
