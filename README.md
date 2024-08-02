@@ -1,5 +1,7 @@
 # BetterBags - Sniper's Filters
 
+[![Publish](https://github.com/ps-wow/BetterBags_SnipersFilters/actions/workflows/main.yml/badge.svg)](https://github.com/ps-wow/BetterBags_SnipersFilters/actions/workflows/main.yml)
+
 "Smart" Filters: (Based on data provided by BetterBags)
 
  - Heirlooms
