@@ -37,4 +37,6 @@ addon.dragonflight.openables = {
     [217110] = true, -- Cache of Awakened Embers
     [217242] = true, -- Awakening Stone Wing
     [217728] = true, -- Cache of Awakened Treasures
+    -- 11.0 PrePatch
+    [226256] = true, -- Token of the Remembrancers
 }
