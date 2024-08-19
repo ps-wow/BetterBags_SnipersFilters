@@ -411,6 +411,10 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
     local equipLoc = data.itemInfo.itemEquipLoc
     local currentExpansion = GetServerExpansionLevel()
 
+    if itemID == 97985 then
+        return "Delete"
+    end
+
     -- Debug
     -- if itemID == 218080 then
     --     Debug(item, "item")
