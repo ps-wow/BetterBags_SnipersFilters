@@ -6,7 +6,7 @@ addon.warwithin.knowledge = {
 
 
     -- Herbalism
-
+    [226301] = true, -- Dornogal Gardening Scythe [+3]
 
     -- Skinning
 
