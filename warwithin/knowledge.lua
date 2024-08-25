@@ -3,7 +3,7 @@ local _, addon = ...
 addon.warwithin.knowledge = {
 
     -- Mining
-
+    [226333] = true, -- Dornogal Chisel [+3]
 
     -- Herbalism
     [226301] = true, -- Dornogal Gardening Scythe [+3]
