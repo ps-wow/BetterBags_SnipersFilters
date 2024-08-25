@@ -8,6 +8,7 @@ addon.warwithin.knowledge = {
 
     -- Herbalism
     [226301] = true, -- Dornogal Gardening Scythe [+3]
+    [226302] = true, -- Earthen Digging Fork [+3]
 
     -- Skinning
 
