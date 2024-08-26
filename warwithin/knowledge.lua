@@ -13,6 +13,7 @@ addon.warwithin.knowledge = {
 
     -- Skinning
     [226340] = true, -- Dornogal Carving Knife [+3]
+    [226341] = true, -- Earthen Worker's Beams [+3]
 
     -- Alchemy
 
@@ -31,6 +32,7 @@ addon.warwithin.knowledge = {
 
     -- Leatherworking
     [226324] = true, -- Earthen Lacing Tools [+3]
+    [226325] = true, -- Dornogal Craftsman's Flat Knife [+3]
 
 
     -- Inscription
