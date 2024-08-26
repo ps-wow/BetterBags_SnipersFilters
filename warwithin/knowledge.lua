@@ -30,6 +30,7 @@ addon.warwithin.knowledge = {
 
 
     -- Leatherworking
+    [226324] = true, -- Earthen Lacing Tools [+3]
 
 
     -- Inscription
