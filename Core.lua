@@ -16,8 +16,6 @@ local T = addon.T
 
 local suffix = " (SF)"
 
-local CURRENT_EXPANSION = 9
-
 -- Transient Values
 local DUNGEON_NORMAL_LOOT = 554 -- War Within
 local DUNGEON_HEROIC_LOOT = 580 -- War Within
@@ -459,9 +457,18 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
     -- If item has expacID
     if data.itemInfo.expacID ~= nil then
         -- 11. War Within
+        if data.itemInfo.expacID == C.WOW.EXPANSIONS.WARWITHIN then
+            if itemType == "Armor" then
+                if SnipersFilters.db.profile.dragonflight.warbound == true then
+                    if addon.Utils.Item.HasText(itemID, "Binds to Warband") then
+                        return BuildCategoryName(db.dragonflight.prefix, "Warbound")
+                    end
+                end
+            end
+        end
 
         -- 10. Dragonflight
-        if data.itemInfo.expacID == DRAGONFLIGHT then
+        if data.itemInfo.expacID == C.WOW.EXPANSIONS.DRAGONFLIGHT then
             if itemType == "Armor" then
                 if SnipersFilters.db.profile.dragonflight.warbound == true then
                     if addon.Utils.Item.HasText(itemID, "Binds to Warband") then

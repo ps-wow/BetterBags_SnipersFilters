@@ -14,7 +14,7 @@ local CONSTANTS = {
             SHADOWLANDS = 8,
             DRAGONFLIGHT = 9,
             WARWITHIN = 10,
-            CURRENT = 9
+            CURRENT = 10
         }
     },
     ITEM = {
