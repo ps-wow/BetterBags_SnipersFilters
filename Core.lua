@@ -413,6 +413,12 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
         return "Delete"
     end
 
+    for id in pairs(addon.db.travel) do 
+        if itemID == id then
+            return "Travel"
+        end
+    end
+
     -- Debug
     -- if itemID == 218080 then
     --     Debug(item, "item")
@@ -465,6 +471,12 @@ categories:RegisterCategoryFunction("Sniper's Smart Filters", function (data)
                     end
                 end
             end
+
+            if data.itemInfo.itemType == "Tradeskill" then
+                return BuildCategoryName(db.warwithin.prefix, "Tradeskill")
+            end
+
+            Debug(data.itemInfo, "itemInfo")
         end
 
         -- 10. Dragonflight

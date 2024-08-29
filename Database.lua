@@ -75,5 +75,9 @@ items.accountBoundRep = {
     [210421] = true, -- Dream Wardens Insignia
 }
 
+items.travel = {
+    [6948] = true, -- Hearthstone
+}
+
 -- Initialise
 addon.db = items
