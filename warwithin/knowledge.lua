@@ -14,6 +14,7 @@ addon.warwithin.knowledge = {
     [226302] = true, -- Earthen Digging Fork [+3]
     [224264] = true, -- Deepgrove Petal [+1]
     [226303] = true, -- Fungarian Slicer's Knife [+3]
+    [224817] = true, -- Algari Herbalist's Notes [+3]
 
     -- Skinning
     [226340] = true, -- Dornogal Carving Knife [+3]
