@@ -34,6 +34,7 @@ addon.warwithin.knowledge = {
     -- Enchanting
     [226285] = true, -- Silver Dornogal Rod [+3]
     [227659] = true, -- Fleeting Arcane Manifestation [+1]
+    [227661] = true, -- Gleaming Telluric Crystal [+4]
 
     -- Cooking
 
@@ -54,6 +55,6 @@ addon.warwithin.knowledge = {
 
 
     -- Tailoring
-
+    [228739] = true, -- Glimmer of Tailoring Knowledge [+2]
 
 }
