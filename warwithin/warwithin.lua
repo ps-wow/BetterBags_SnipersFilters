@@ -1,3 +1,7 @@
 local _, addon = ...
 
-addon.warwithin = {}
+addon.warwithin = {
+    sparks = {
+        [211297] = true, -- Fractured Spark of Omens
+    }
+}

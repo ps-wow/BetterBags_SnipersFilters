@@ -394,6 +394,8 @@ function SnipersFilters:OnInitialize()
     -- War Within
     --- Renown
     for itemID in pairs(addon.warwithin.renown) do categories:AddItemToCategory(itemID, BuildCategoryName(db.warwithin.prefix, "Renown")) end
+    --- Sparks
+    for itemID in pairs(addon.warwithin.sparks) do categories:AddItemToCategory(itemID, BuildCategoryName(db.warwithin.prefix, "Sparks")) end
     --- Profession Knowledge
     for itemID in pairs(addon.warwithin.knowledge) do categories:AddItemToCategory(itemID, BuildCategoryName(db.warwithin.prefix, "Knowledge")) end
     --- Openables

@@ -3,18 +3,22 @@ local _, addon = ...
 addon.warwithin.knowledge = {
 
     -- Mining
+    [224583] = true, -- Slab of Slate [+1]
     [226333] = true, -- Dornogal Chisel [+3]
     [226334] = true, -- Earthern Excavator's Shovel [+3]
     [226337] = true, -- Devout Archaeologist's Excavator [+3]
     [224818] = true, -- Algari Miner's Notes [+3]
-    [224583] = true, -- Slab of Slate [+1]
+    [226336] = true, -- Arathi Precision Drill [+3]
 
     -- Herbalism
+    [224264] = true, -- Deepgrove Petal [+1]
     [226301] = true, -- Dornogal Gardening Scythe [+3]
     [226302] = true, -- Earthen Digging Fork [+3]
-    [224264] = true, -- Deepgrove Petal [+1]
     [226303] = true, -- Fungarian Slicer's Knife [+3]
     [224817] = true, -- Algari Herbalist's Notes [+3]
+    [226304] = true, -- Arathi Garden Trowel [+3]
+    [224265] = true, -- Deepgrove Rose [+4]
+    [224835] = true, -- Deepgrove Roots [+1]
 
     -- Skinning
     [226340] = true, -- Dornogal Carving Knife [+3]
