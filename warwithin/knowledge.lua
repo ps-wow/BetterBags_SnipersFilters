@@ -50,6 +50,7 @@ addon.warwithin.knowledge = {
 
 
     -- Inscription
+    [226308] = true, -- Dornogal Scribe's Quill [+3]
 
 
     -- Jewelcrafting
