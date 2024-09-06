@@ -39,6 +39,7 @@ addon.warwithin.knowledge = {
     [226285] = true, -- Silver Dornogal Rod [+3]
     [227659] = true, -- Fleeting Arcane Manifestation [+1]
     [227661] = true, -- Gleaming Telluric Crystal [+4]
+    [226289] = true, -- Enchanted Arathi Scroll [+3]
 
     -- Cooking
 

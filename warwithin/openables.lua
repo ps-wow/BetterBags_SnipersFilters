@@ -6,4 +6,6 @@ addon.warwithin.openables = {
     [228361] = true, -- Seasoned Adventurer's Cache
     [227450] = true, -- Sky Racer's Purse
     [224784] = true, -- Pinnacle Cache
+    [226264] = true, -- Radiant Cache
+    [228741] = true, -- Lamplighter Supply Satchel
 }
