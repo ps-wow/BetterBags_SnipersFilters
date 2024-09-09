@@ -1,5 +1,8 @@
 # Released
 
+## v1.0.2
+ - Add lots more items, still more to go.
+
 ## v1.0.1
  - Use BetterBags Plugin System
  - Add ability for some prefixes to be use defined.
