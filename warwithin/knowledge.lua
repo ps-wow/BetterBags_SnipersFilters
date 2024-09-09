@@ -62,5 +62,6 @@ addon.warwithin.knowledge = {
 
     -- Tailoring
     [228739] = true, -- Glimmer of Tailoring Knowledge [+2]
+    [226348] = true, -- Dornogal Seam Ripper [+3]
 
 }
