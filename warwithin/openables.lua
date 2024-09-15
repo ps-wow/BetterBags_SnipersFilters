@@ -8,4 +8,5 @@ addon.warwithin.openables = {
     [224784] = true, -- Pinnacle Cache
     [226264] = true, -- Radiant Cache
     [228741] = true, -- Lamplighter Supply Satchel
+    [224784] = true, -- Pinnacle Cache
 }

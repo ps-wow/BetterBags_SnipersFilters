@@ -9,6 +9,7 @@ addon.warwithin.knowledge = {
     [226337] = true, -- Devout Archaeologist's Excavator [+3]
     [224818] = true, -- Algari Miner's Notes [+3]
     [226336] = true, -- Arathi Precision Drill [+3]
+    [226339] = true, -- Nerubian Mining Supplies [+3]
 
     -- Herbalism
     [224264] = true, -- Deepgrove Petal [+1]
